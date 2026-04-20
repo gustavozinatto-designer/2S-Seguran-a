@@ -1,26 +1,15 @@
 import { useState, useEffect, ChangeEvent, useRef, cloneElement, ReactElement } from 'react';
 import { motion, AnimatePresence, useScroll, useTransform, useInView } from 'motion/react';
 import Lenis from 'lenis';
-import { 
-  Menu, 
-  X, 
-  ArrowRight,
-  ArrowLeft,
-  ChevronDown,
-  Star,
-  MessageSquare,
-  Trophy,
-  Smartphone,
-  History,
-  ShieldCheck,
-  Target,
-  Eye,
-  Heart,
-  MessageCircle,
-  MapPin,
-  Phone,
-  Instagram
-} from 'lucide-react';
+import { Instagram, Phone, MapPin, MessageCircle, Heart, Eye, Target, ShieldCheck, History, Smartphone, Trophy, MessageSquare, Star, ChevronDown, ArrowLeft, ArrowRight, X, Menu } from 'lucide-react';
+import logo2s from './assets/images/logo-2s.png';
+import logo2sWhite from './assets/images/logo-2s-white.png';
+import heroBg from './assets/images/fundo-hero.jpg';
+import essenceBg from './assets/images/fundo-secao-nossa-essencia.webp';
+import portariaRemota from './assets/images/portaria-remota.webp';
+import portariaHibrida from './assets/images/portaria-hibrida.webp';
+import portariaAutonoma from './assets/images/portaria-autonoma.webp';
+import portariaPresencial from './assets/images/portaria-presencial.webp';
 
 /**
  * Counter Component for animated statistics
@@ -310,7 +299,7 @@ export default function App() {
           <div className="flex items-center group cursor-pointer pointer-events-auto h-10 md:h-12">
             <a href="#inicio" aria-label="Voltar para o início" className="h-full w-auto relative flex items-center">
               <img 
-                src="/images/logo-2s.png" 
+                src={logo2s} 
                 alt="2S Portaria Logo" 
                 width="140"
                 height="48"
@@ -318,7 +307,7 @@ export default function App() {
                 loading="eager"
               />
               <img 
-                src="/images/logo-2s-white.png" 
+                src={logo2sWhite} 
                 alt="2S Portaria Logo Branca" 
                 width="140"
                 height="48"
@@ -397,14 +386,13 @@ export default function App() {
         >
           {/* Background Image - Performance Optimized */}
           <img 
-            src="/images/fundo-hero.jpg"
+            src={heroBg}
             alt="Arquitetura premium representando segurança"
             loading="eager"
             fetchPriority="high"
             width="1920"
             height="1080"
             className="w-full h-full object-cover object-center opacity-40 grayscale-[0.3]"
-            referrerPolicy="no-referrer"
           />
           {/* Sophisticated Overlay - Multi-layered for depth */}
           <div className="absolute inset-x-0 bottom-0 h-[40%] bg-gradient-to-t from-black via-black/20 to-transparent" />
@@ -522,22 +510,22 @@ export default function App() {
               {
                 title: 'Portaria Remota',
                 desc: 'Tecnologia inovadora de controle de acesso gerenciada por nossa central 24h, garantindo rigor e eficiência total.',
-                image: '/images/portaria-remota.webp'
+                image: portariaRemota
               },
               {
                 title: 'Portaria Híbrida',
                 desc: 'O melhor dos dois mundos: presença física durante o dia e vigilância remota absoluta durante a noite.',
-                image: '/images/portaria-hibrida.webp'
+                image: portariaHibrida
               },
               {
                 title: 'Portaria Autônoma',
                 desc: 'Autonomia completa com integração via app, permitindo o gerenciamento direto de acessos pelo morador.',
-                image: '/images/portaria-autonoma.webp'
+                image: portariaAutonoma
               },
               {
                 title: 'Portaria Presencial',
                 desc: 'Excelência em atendimento físico com suporte tecnológico da 2S para condomínios de alto fluxo.',
-                image: '/images/portaria-presencial.webp'
+                image: portariaPresencial
               }
             ].map((service, idx) => (
               <motion.div
@@ -794,13 +782,12 @@ export default function App() {
         {/* Architectural Background Overlay */}
         <div className="absolute inset-0 z-0">
           <img 
-            src="/images/fundo-secao-nossa-essencia.webp" 
+            src={essenceBg} 
             alt="Arquitetura de fundo" 
             width="1920"
             height="1080"
             className="w-full h-full object-cover opacity-5 grayscale"
             loading="lazy"
-            referrerPolicy="no-referrer"
           />
         </div>
 
@@ -965,7 +952,7 @@ export default function App() {
               <div className="flex items-center gap-6">
                 <div className="h-20 md:h-32 w-auto">
                   <img 
-                    src="/images/logo-2s-white.png" 
+                    src={logo2sWhite} 
                     alt="2S Portaria Logo Branca Footer" 
                     width="180"
                     height="64"
